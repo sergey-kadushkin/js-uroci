@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Урок №2. Основы языка JavaScript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<header>
+		<h2>Урок №2. Основы языка JavaScript</h2>
+	</header><br>
+
+	<button onclick="funс1()">Задание № 1</button>
+	<button onclick="func2()">Задание № 2</button>
+	<button onclick="func3()">Задание № 3</button>
+	<button onclick="func4()">Задание № 4</button>
+	<button onclick="func5()">Задание № 5</button>
+	<button onclick="func6()">Задание № 6</button>
+	<button onclick="func7()">Задание № 7</button>
+	<button onclick="func8()">Задание № 8</button>
+	<button onclick="func9()">Задание № 9</button>
+	<button onclick="func10()">Задание № 10</button>
+	<button onclick="func11()">Задание № 11</button>
+	<button onclick="func12()">Задание № 12</button>
+	<button onclick="func13()">Задание № 13</button>
+	<button onclick="func14()">Задание № 14</button>
+	<button onclick="func15()">Задание № 15</button>
+	<button onclick="func16()">Задание № 16</button>
+	<button onclick="func17()">Задание № 17</button>
+	<button onclick="func18()">Задание № 18</button>
+
+
+	<script type="text/javascript">
+		
+		function funс1() {
+			var num = 3;
+			alert(num);
+		}
+
+		function func2() {
+			var a = 10;
+			var b = 2;
+			var summma = a+b;
+			var raz = a-b;
+			var umn = a*b;
+			var delen = a/b;
+			alert("a + b = "+summma);
+			alert("a - b = "+raz);
+			alert("a * b = "+umn);
+			alert("a / b = "+delen);
+		}
+
+		function func3() {
+			var c = 15;
+			var d = 2;
+			var result = c + d;
+			alert(result);
+		}
+
+		function func4() {
+			var a = 10;
+			var d = 2;
+			var c = 5;
+			alert(a + b + c);	
+		}
+		
+		function func5() {
+			var a = 17;
+			var b = 10;
+			var c = a - b;
+			var d = 7;
+			var result = c + d;
+			alert(result);
+		}
+
+		function func6() {
+			var str = "Привет мир!";
+			alert(str);
+		}
+
+		function func7() {
+			var str1 = "Привет";
+			var str2 = " мир!";
+			alert(str1+str2);
+		}
+
+		function func8() {
+			var name = "Сергей";
+			alert("Привет, "+name);
+		}
+		
+		function func9() {
+			var age = 19;
+			alert("Мне "+age+" лет");
+		}
+
+		function func10() {
+			var name = prompt("Ваше Имя ");
+			alert("Привет, "+name);
+		}
+
+		function func11() {
+			var number = prompt("Введите число");
+			alert("Квадрат числа = "+number*number);
+		}
+
+		function func12() {
+			var str = 'abcde';
+			alert(str[0]); //выведем букву 'a'
+			alert(str[3]); //выведем букву 'c'
+			alert(str[4]); //выведем букву 'e'
+		}
+
+		function func13() {
+			var num = "12345";
+			alert(num[0]*num[1]*num[2]*num[3]*num[4]);
+		}
+
+		function func14() {
+			alert("In hour "+60*60+"sec");
+			alert("In day "+60*60*24+"sec");
+			alert("In month "+60*60*24*31+"sec");
+		}
+
+		function func15() {
+			var hour = "13";
+			var min = "34";
+			var sec = "21";
+			alert(hour+":"+min+":"+sec);
+		}
+
+		function func16() {
+			var ch = 456;
+			alert("Квадрат числа " + ch + " = " + ch*ch )
+		}
+
+		function func17() {
+			var num = 78;
+			num += 75;
+			num -= 8;
+			num *= 120;
+			num /= 150;
+			alert(num);
+		}
+
+		function func18() {
+			var num = 10;
+			num++;
+			num++;
+			num--;
+			alert(num);
+		}
+	</script>
+
+	<style type="text/css">
+		button {
+			height: 40px;
+			padding: 10px;
+			margin: 5px auto;
+			display: block;
+			border-radius: 5px;
+		}
+
+		header {
+			width: 100%;
+		}
+
+		header h2{
+			width: 50%;
+			margin: 5px auto;
+		}
+	</style>
+</body>
+</html>
