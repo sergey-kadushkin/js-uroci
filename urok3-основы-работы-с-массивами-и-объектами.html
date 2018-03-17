@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Урок №3. Основы работы с массивами и объектами</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<header>
+		<h2>Урок №3. Основы работы с массивами и объектами</h2>
+	</header><br>
+
+	<button onclick="funс1()">Задание № 1</button>
+	<button onclick="func2()">Задание № 2</button>
+	<button onclick="func3()">Задание № 3</button>
+	<button onclick="func4()">Задание № 4</button>
+	<button onclick="func5()">Задание № 5</button>
+	<button onclick="func6()">Задание № 6</button>
+	<button onclick="func7()">Задание № 7</button>
+	<button onclick="func8()">Задание № 8</button>
+	<button onclick="func9()">Задание № 9</button>
+	<button onclick="func10()">Задание № 10</button>
+	<button onclick="func11()">Задание № 11</button>
+	<button onclick="func12()">Задание № 12</button>
+
+
+	<script type="text/javascript">
+		
+		function funс1() {
+			arr = ["a","b","c"];
+			alert(arr);
+		}
+
+		function func2() {
+			arr = ["a","b","c"];
+			alert(arr[0]);
+			alert(arr[1]);
+			alert(arr[2]);
+		}
+
+		function func3() {
+			arr = ["a","b","c","d"];
+			alert(arr[0]+"+"+arr[1]+"+"+arr[2]+"+"+arr[3]);
+		}
+
+		function func4() {
+			var arr = [2, 5, 3, 9];
+			var result = arr[0] * arr[1] + arr[2] * arr[3];
+			alert(result);
+			
+		}
+		
+		function func5() {
+			var obj = {a: 1, b: 2, c: 3};
+			alert(obj['c']);
+			alert(obj.c);
+		}
+
+		function func6() {
+			var obj = {Коля: '1000', Вася: '500', Петя: '200'};
+			alert("Зарплата Пети: "+obj['Петя']+"\n"+"Зарплата Коли: "+obj["Коля"]);
+		}
+
+		function func7() {
+			var obj = {1:'пн', 2:'вт', 3:'ср', 4:'чт', 5:'пт', 6:'сб', 7:'вс'};
+			alert(obj[4]);
+		}
+
+		function func8() {
+			var day = 6;
+			var obj = {1:'пн', 2:'вт', 3:'ср', 4:'чт', 5:'пт', 6:'сб', 7:'вс'};
+			alert(obj[day]);
+		}
+		
+		function func9() {
+			var arr = [ [1, 2, 3], [4, 5, 6], [7,8,9] ];
+			alert(arr[1][0]);
+		}
+
+		function func10() {
+			var o =  {js:['jQuery', 'Angular'], php: 'hello', css: 'world'};
+			alert(o.js[0])
+		}
+
+		function func11() {
+			var week = {
+			'ru':['пн','вт','ср','чт','пт','сб','вс'],
+			'en':['mn','ts','wd','th','fr','st','sn']
+			};
+			alert("RUS: "+week['ru'][0]+"\n"+"ENG: "+week['en'][2]);
+		}
+
+		function func12() {
+			var week = {
+			'ru':['пн','вт','ср','чт','пт','сб','вс'],
+			'en':['mn','ts','wd','th','fr','st','sn']
+			};
+			var lang = 'ru';
+			var day = 5;
+			alert(week[lang][day]);
+		}
+	</script>
+
+	<style type="text/css">
+		button {
+			height: 40px;
+			padding: 10px;
+			margin: 5px auto;
+			display: block;
+			border-radius: 5px;
+		}
+
+		header {
+			width: 100%;
+		}
+
+		header h2{
+			width: 50%;
+			margin: 5px auto;
+		}
+	</style>
+</body>
+</html>
