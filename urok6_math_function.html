@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Урок №6. Математические функции JavaScript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<header>
+		<h2>Урок №5. Математические функции JavaScript</h2>
+	</header><br>
+
+
+	<button onclick="func2()">Задание № 2</button>
+	<button onclick="func5()">Задание № 5</button>
+	<button onclick="func7()">Задание № 7</button>
+	<button onclick="func8()">Задание № 8</button>
+	<button onclick="func9()">Задание № 9</button>
+	<button onclick="func11()">Задание № 11</button>
+	<button onclick="func14()">Задание № 14</button>
+
+
+
+
+	<script type="text/javascript">
+		
+		function func2() {
+			a = prompt("a = ");
+			b = prompt("b = ");
+			delen = (a % b);
+			if (delen==0) {
+				alert("Делится");
+			} else {
+				alert("Делится с остатком");
+			}
+		}
+
+		function func5() {
+			var arr = [4, 2, 5, 19, 13, 0, 10];
+			var summ = 0;
+			for (var i = 0; i < arr.length; i++) {
+				summ += Math.pow(arr[i], 3);
+			}
+			alert("summ = " + summ + "\nsqrt = "+Math.sqrt(summ));
+		}
+
+		function func7() {
+			var sq = Math.sqrt(587);
+			var obj = {'floor': Math.floor(sq), 'celi': Math.ceil(sq)}
+			for (key in obj){
+				alert(key+':'+obj[key]);
+			}
+		}
+		
+		function func8() {
+			alert("max = " + Math.max(4, -2, 5, 19, -130, 0, 10)); //максимальное 
+			alert("min = " + Math.min(4, -2, 5, 19, -130, 0, 10)); //минимальное
+		}
+
+		function func9() {
+			alert(Math.floor(Math.random() * (100)) + 1);
+		}
+
+		function func11() {
+			a = prompt("a = ");
+			b = prompt("b = ");
+			alert("|a-b| = " + Math.abs(a-b));
+		}
+
+		function func14() {
+			a = prompt("a = ");
+			var fact = 1;
+			for (var i = 1; i <= Number(a); i++) {
+				fact *= i;
+			}
+			alert("a! = "+fact);
+		}
+	
+
+	</script>
+
+	<style type="text/css">
+		button {
+			height: 40px;
+			padding: 10px;
+			margin: 5px auto;
+			display: block;
+			border-radius: 5px;
+		}
+
+
+		header {
+			width: 100%;
+		}
+
+		header h2{
+			width: 30%;
+			margin: 5px auto;
+		}
+	</style>
+</body>
+</html>
