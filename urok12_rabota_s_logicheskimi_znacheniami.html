@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Урок №12. Приемы работы с логическими значениями</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<header>
+		<h2>Урок №12. Приемы работы с логическими значениями</h2>
+	</header><br>
+
+
+	<button onclick="func1()">Задание № 1</button>
+	<button onclick="func2()">Задание № 2</button>
+	<button onclick="func3()">Задание № 3</button>
+
+
+	<script type="text/javascript">
+		
+		function func1() {
+			var a = Number(prompt("a = "));
+			var b = Number(prompt("b = "));
+
+			function fun() {
+				return (a == b);
+			}
+
+			var d = fun(a,b);
+
+			if (d === true) {
+				alert("a = b");
+			} else {
+				alert("a != b");
+			}
+		}
+
+		function func2() {
+			var a = Number(prompt("a = "));
+			var b = Number(prompt("b = "));
+
+			function fun1() {
+				return (a + b > 10);
+			}
+
+			var gor = fun1(a,b);
+
+			if (gor === true) {
+				alert("a +b > 10");
+			} else {
+				alert("a + b <= 10");
+			}
+		}
+
+		function func3() {
+			var a = Number(prompt("a = "));
+
+			function fun2() {
+				return (a < 0);
+			}
+
+			var gor = fun2(a);
+
+			if (gor === true) {
+				alert("a < 0");
+			} else {
+				alert("a >= 0");
+			}
+		}
+		
+
+	</script>
+
+	<style type="text/css">
+		button {
+			height: 40px;
+			padding: 10px;
+			margin: 5px auto;
+			display: block;
+			border-radius: 5px;
+		}
+
+
+		header {
+			width: 100%;
+		}
+
+		header h2{
+			width: 50%;
+			margin: 5px auto;
+		}
+	</style>
+</body>
+</html>
