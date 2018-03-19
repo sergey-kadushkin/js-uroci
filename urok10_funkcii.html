@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Урок №10. Задачи на основы работы с пользовательскими функциями в JavaScript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<header>
+		<h2>Урок №10. Задачи на основы работы с пользовательскими функциями в JavaScript</h2>
+	</header><br>
+
+
+	<button onclick="func1()">Задание № 1</button>
+	<button onclick="func2()">Задание № 2</button>
+	<button onclick="func3()">Задание № 3</button>
+	<button onclick="func4()">Задание № 4</button>
+
+
+	<script type="text/javascript">
+		
+		function func1() {
+			var num = Number(prompt("n = "));
+			function squere() {
+				return(num*num);
+			}
+			alert("n^2" + squere(num));
+		}
+
+		function func2() {
+			var a = Number(prompt("a = "));
+			var b = Number(prompt("b = "));
+			function sloj() {
+				return(a+b);
+			}
+			alert("a + b = "+sloj(a,b));
+		}
+
+		function func3() {
+			var a = Number(prompt("a = "));
+			var b = Number(prompt("b = "));
+			var c = Number(prompt("c = "));
+			function kdkd() {
+				return((a-b)/c);
+			}
+			alert("(a-b)/c = " + kdkd(a,b,c));
+		}
+		
+		function func4() {
+			var num = Number(prompt("n = "));
+			function getDay() {
+				var arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+				return arr[num - 1];
+			}
+			alert(getDay(num));
+		}
+
+
+
+	</script>
+
+	<style type="text/css">
+		button {
+			height: 40px;
+			padding: 10px;
+			margin: 5px auto;
+			display: block;
+			border-radius: 5px;
+		}
+
+
+		header {
+			width: 100%;
+		}
+
+		header h2{
+			width: 50%;
+			margin: 5px auto;
+		}
+	</style>
+</body>
+</html>
