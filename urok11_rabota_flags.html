@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Урок №11. Задачи на приемы работы с флагами на JavaScript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<header>
+		<h2>Урок №11. Задачи на приемы работы с флагами на JavaScript</h2>
+	</header><br>
+
+
+	<button onclick="func1()">Задание № 1</button>
+	<button onclick="func2()">Задание № 2</button>
+	<button onclick="func3()">Задание № 3</button>
+
+
+	<script type="text/javascript">
+		
+		function func1() {
+			var arr = [1,4,5,6,4,6,8,5,21];
+			var flag = false;
+			for (var i = 0; i < arr.length; i++) {
+				if (arr[i] === 5) {
+					flag = true;
+					break;
+				}
+			}
+			if (flag===true) {
+				alert('Есть');
+			} else {
+				alert('Нет');
+			}
+		}
+
+		function func2() {
+			var num = Number(prompt("n = "));
+			var flag = false;
+			for (var i = 2; i < num-1; i++) {
+				if (num % i == 0) {
+					flag = true;
+				}
+			}
+
+			if (flag === true) {
+				alert("Число n НЕ натуральное");
+			} else {
+				alert("Число n натуральное");
+			}
+		}
+
+		function func3() {
+			var arr = [1,4,5,6,6,4,6,8,5,21];
+			var flag = false;
+
+			for (var i = 1; i < arr.length; i++) {
+				if (arr[i]===arr[i-1]) {
+					flag = true;
+				}
+			}
+
+			if (flag === true) {
+				alert(arr + "\n" + "Массив содержит два одинаковых числа подряд");
+			} else {
+				alert(arr + "\n" + "Массив НЕ содержит два одинаковых числа подряд");
+			}
+		}
+		
+
+	</script>
+
+	<style type="text/css">
+		button {
+			height: 40px;
+			padding: 10px;
+			margin: 5px auto;
+			display: block;
+			border-radius: 5px;
+		}
+
+
+		header {
+			width: 100%;
+		}
+
+		header h2{
+			width: 50%;
+			margin: 5px auto;
+		}
+	</style>
+</body>
+</html>
