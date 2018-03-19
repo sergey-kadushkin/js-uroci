@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Урок №9. Отработка стандартных функций JavaScript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<header>
+		<h2>Урок №9. Отработка стандартных функций JavaScript</h2>
+	</header><br>
+
+
+	<button onclick="func1()">Задание № 1</button>
+	<button onclick="func2()">Задание № 2</button>
+	<button onclick="func3()">Задание № 3</button>
+	<button onclick="func4()">Задание № 4</button>
+	<button onclick="func5()">Задание № 5</button>
+
+
+	<script type="text/javascript">
+		
+		function func1() {
+			var a = 'sdsfjkdjjshj';
+			var a2 = a[0].toUpperCase()+a.slice(1);
+			alert(a+ ' -> ' + a2);
+		}
+
+		function func2() {
+			var a = 'JavaScript';
+			a2 = a.split('').reverse().join('');
+			alert(a + " -> " + a2)
+		}
+
+		function func3() {
+			var str = '3875196402';
+			arr = str.split('').sort().join('');
+			alert(str+" --->>> "+ arr);
+		}
+		
+		function func4() {
+			var str = 'http://www.youtube.com';
+			var t = str.slice(0,7);
+			if (t==='http://') {
+				alert("Начинается на http://");
+			} else {
+				alert("Не начинается на http://");
+			}
+		}
+
+		function func5() {
+			var str = 'index.html';
+			if (str.substr(-5) == '.html') {
+				alert('Да');
+			} else {
+				alert('Нет');
+			}
+		}
+
+
+	</script>
+
+	<style type="text/css">
+		button {
+			height: 40px;
+			padding: 10px;
+			margin: 5px auto;
+			display: block;
+			border-radius: 5px;
+		}
+
+
+		header {
+			width: 100%;
+		}
+
+		header h2{
+			width: 30%;
+			margin: 5px auto;
+		}
+	</style>
+</body>
+</html>
