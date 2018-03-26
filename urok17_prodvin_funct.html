@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Урок №17. Продвинутая работа с пользовательскими функциями в JavaScript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<header>
+		<h2>Урок №17. Продвинутая работа с пользовательскими функциями в JavaScript</h2>
+	</header><br>
+
+
+	<button onclick="func1()">Задание № 1</button>
+	<button onclick="func2()">Задание № 2</button>
+
+
+
+	<script type="text/javascript">
+		
+		function func1() {
+			var arr = prompt("Write array from number").split(' ');
+			function func(arr) {
+				alert(arr[0]);
+				arr.splice(0, 1);
+				if (arr.length > 0) {
+					func(arr);
+				}
+			}
+
+			func(arr);
+		}
+
+		function func2() {
+			var num = Number(prompt('Введите число'));
+
+			function func(num) {
+				var text = String(num);
+				var summ = 0;
+
+				for (var i = 0; i < text.length; i++) {
+				 	summ += Number(text[i]);
+				} 
+				console.log(summ);
+				if (summ>9) {
+					num = summ;
+					func(num);
+				}
+			}
+			func(num);
+		}
+
+	
+	
+		
+	</script>
+
+	<style type="text/css">
+		button {
+			height: 40px;
+			padding: 10px;
+			margin: 5px auto;
+			display: block;
+			border-radius: 5px;
+		}
+
+
+		header {
+			width: 100%;
+		}
+
+		header h2{
+			width: 50%;
+			margin: 5px auto;
+		}
+	</style>
+</body>
+</html>
