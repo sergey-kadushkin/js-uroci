@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Урок №19. Задачи на основы работы с DOM в JavaScript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	<header>
+		<h2>Урок №19. Задачи на основы работы с DOM в JavaScript</h2>
+	</header><br>
+
+	<div class="name-batton">
+		<h2>Задание № 1. Алерт по нажатию на кнопку</h2>
+		<button onclick="alert('Привет!')">Нажми на меня</button>
+	</div>
+
+	<div class="name-batton">
+		<h2>Задание № 2. Алерт при наведении</h2>
+		<button onmouseover="alert('Hello!')">Наведи на меня</button>
+	</div>
+
+	<div class="name-batton">
+		<h2>Задание № 3. Алерт при двойном щелчке</h2>
+		<button ondblclick="alert('ТАК ДЕРЖАТЬ')">Двойной щелчок</button>
+
+	</div>
+
+	<div class="name-batton">
+		<h2>Задание № 4. Onmouseout</h2>
+		<button onmouseout="alert('Привет!')">Наведи на меня мышь - а потом убери!</button>
+	</div>
+
+	<div class="name-batton">
+		<h2>Задание № 5. GetElementByID</h2>
+		<input type="text" name="text" value="Hello" id="func5">
+		<input type="button" name="but" onclick="func5()" value="Нажмите">
+	</div>
+
+	<div class="name-batton">
+		<h2>Задание № 6.</h2>
+		<input type="text" name="text" value="Hello" id="func6">
+		<input type="button" name="but" onclick="func6()" value="Нажмите">
+	</div>
+
+	<div class="name-batton">
+		<h2>Задание № 7.</h2>
+		<img src="i0qnwz9Cpso.jpg" id="func">
+		<input type="button" name="but" onclick="func7()" value="Нажмите">
+	</div>
+
+	<div class="name-batton">
+		<h2>Задание № 8. This</h2>
+		<input type="text" name="telf" value="Focus it!" onfocus="func8(this)">
+	</div>
+
+	<div class="name-batton">
+		<h2>Задание № 12.</h2>
+		<input type="submit" onclick="func12(this)" value="Нажми на меня!">
+	</div>
+
+	<div class="name-batton">
+		<h2>Задание № 13</h2>
+		<img src="i0qnwz9Cpso.jpg" width="150" id="func13" onmouseover="func13_1(this)" onmouseout="func13_2(this)">
+	</div>
+
+	<div class="name-batton">
+		<h2>Задание № 14. DOM & CSS</h2>
+		<input type="text" name="text" value="Hello" id="func14">
+		<input type="button" name="but" onclick="func14()" value="Нажмите">
+	</div>
+
+	<div class="name-batton">
+		<h2>Задание № 15</h2>
+		<input type="text" value="Ку-ку" id="func15">
+		<button onclick="func15_hide()">Нажми на меня!</button>
+		<button onclick="func15_show()">Нажми потом на меня!</button>
+	</div>
+
+	<div class="name-batton">
+		<h2>Задание № 16</h2>
+		<input type="text" value="Ку-ку" id="func16">
+		<br>
+		<br>
+		<button onclick="func16()">Нажми на меня!</button>
+	</div>
+
+	<div class="name-batton">
+		<h2>Задание № 18</h2>
+		<p>
+		Кнопка считает кол-во нажатий по ней.
+		</p>
+		<input type="button" name="but2" value="0" onclick="func18(this)">
+	</div>
+
+	<div class="name-batton">
+		<h3>Задание № 24</h3>
+		<p>
+		Обратите внимание на курсор в различных состояниях.
+		</p>
+		<input type="submit" onclick="func24(this)" value="Нажми на меня!">
+	</div>
+
+
+	<script type="text/javascript">
+		function func5() {
+			var elem = document.getElementById('func5');
+			alert(elem.value)
+		}
+		
+		function func6() {
+			var elem = document.getElementById('func6');
+			elem.value = 'HabraHabr';
+		}
+		function func7() {
+			var elem = document.getElementById('func');
+			elem.src = 'aE1xg2TTpsA.jpg';
+		}
+
+		function func8(elem) {
+			alert(elem.value);
+		}
+
+		function func12(elem) {
+			elem.value = 'О, теперь на меня больше не нажать!';
+			elem.disabled = true;
+		}		
+
+		function func13_1(elem) {
+			elem.src= 'aE1xg2TTpsA.jpg';
+		}
+		function func13_2(elem) {
+			elem.src = 'i0qnwz9Cpso.jpg';
+		}
+
+		function func14() {
+			var elem = document.getElementById('func14');
+			elem.style.color = 'red';
+		}
+
+		function func15_hide() {
+			var elem = document.getElementById('func15');
+			elem.style.display = 'none';
+		}
+
+		function func15_show() {
+			var elem = document.getElementById('func15');
+			elem.style.display = 'block';
+		}
+
+		function func16() {
+			var elem = document.getElementById('func16');
+			elem.value = 'I change the text';
+			elem.style.width = '250px';
+			elem.style.height = '100px';
+			elem.style.border = '2px solid grey';
+			elem.style.color = 'red';
+			elem.style.borderRadius = '10px';
+		}
+
+		function func18(elem) {
+			elem.value = Number(elem.value)+1;
+		}
+
+		function func24(elem) {
+			elem.disabled = true;
+			elem.style.cursor = 'not-allowed';
+		}
+
+	</script>
+
+	<style type="text/css">
+		button {
+			height: 40px;
+			padding: 10px;
+			margin: 5px auto;
+			display: block;
+			border-radius: 5px;
+		}
+
+
+		header {
+			width: 100%;
+		}
+
+		header h2{
+			width: 50%;
+			margin: 5px auto;
+		}
+
+		.name-batton {
+			width: 60%;
+			margin: 20px auto;
+			border: 3px solid grey;
+			border-radius: 5px;
+		}
+	</style>
+</body>
+</html>
