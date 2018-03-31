@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Урок №21. Задачи на даты в JavaScript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<header>
+		<h2>Урок №21. Задачи на даты в JavaScript</h2>
+	</header><br>
+
+
+	<button onclick="func1()">Задание № 1</button>
+	<button onclick="func2()">Задание № 2</button>
+	<button onclick="func3()">Задание № 3</button>
+	<button onclick="func4()">Задание № 4</button>
+	<button onclick="func5()">Задание № 5</button>
+	<button onclick="func6()">Задание № 6</button>
+	<button onclick="func7()">Задание № 7</button>
+	<button onclick="func8()">Задание № 8</button>
+	<button onclick="func10()">Задание № 10</button>
+	<button onclick="func11()">Задание № 11</button>
+	<button onclick="func12()">Задание № 12</button>
+	
+
+
+	<script type="text/javascript">
+		
+		function func1() {
+			var date = new Date();
+			alert(date.getDate() + '-й день месяца');		
+		}
+
+		function func2() {
+			var date = new Date();
+			alert((Number(date.getMonth())+1) + "-й месяц");
+		}
+
+		function func3() {
+			var date = new Date();
+			alert(date.getFullYear() + "-й год");
+		}
+
+		function func4() {
+			var date = new Date();
+			function getZero(num){
+				if (num > 0 && num < 10) { 
+					return '0' + num;
+				} else {
+					return num;
+				}
+			}
+
+			alert(getZero(date.getHours()) + ':' + getZero(date.getMinutes()) + ':' + getZero(date.getSeconds()) + ' ' + getZero(date.getDate()) + '.' + getZero(date.getMonth() + 1) + '.' + date.getFullYear());
+		}
+		
+		function func5() {
+			var date = new Date();
+			alert(date.getDay());
+		}
+
+		function func6() {
+			var date = new Date();
+			
+			function showDay(num) {
+				var arr = ['Monday',
+						'Tuesday',
+						'Wednesday',
+						'Thursday',
+						'Friday',
+						'Saturday',
+						'Sunday'];
+				return(arr[Number(num)-1]);
+			}
+
+			alert(showDay(date.getDay()));
+		}
+
+		function func7() {
+			var date = new Date(2015, 0, 7); //месяц 0, так как их нумерация с нуля
+			var day = date.getDay();
+
+			function showDay(day) {
+				var days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+				return days[day];
+			}
+
+			alert(showDay(day));
+		}
+
+		function func8() {//Выведите на экран количество минут с 1-го января 1970 года до настоящего момента времени
+			var date = new Date();
+			var minute = Math.floor(date.getTime() / (1000 * 60));
+			alert(minute);
+			
+		}
+
+		function func10() {//Выведите на экран количество секунд с начала дня до настоящего момента времени.
+			var date = new Date();
+			var now = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 0, 0, 0);
+			var result = Math.floor((date.getTime() - now.getTime()) / 1000);
+			alert(result);
+		}
+
+		function func11() {//Выведите на экран количество секунд, которое осталось до конца дня.
+			var date = new Date();
+			var lost = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 23, 59, 59);
+			var result = Math.floor((lost.getTime() - date.getTime()) / 1000);
+			alert(result);
+		}
+
+		function func12() {//сколько осталось до дня рождения
+			var date_of_born = prompt('Введите вашу дату рождения в формате гггг-мм-дд');
+			var arr = date_of_born.split('-');
+
+			var b_year = Number(arr[0]);
+			var b_month = Number(arr[1])-1;
+			var b_day = Number(arr[2]);
+
+			date_of_born = new Date(b_year, b_month, b_day, 0, 0, 0)
+
+			var date_now = new Date();
+
+			if ((Number(date_now.getMonth()))>b_month) {
+				var next_birsday = new Date((Number(date_now.getFullYear())+1), b_month, b_day, 0, 0, 0);
+			} else if (((Number(date_now.getMonth()))>b_month) && (Number(date_now.getDate())>b_day)) {
+				var next_birsday = new Date((Number(date_now.getFullYear())+1), b_month, b_day, 0, 0, 0);
+			} else {
+				var next_birsday = new Date(date_now.getFullYear(), b_month, b_day, 0, 0, 0);
+			}
+
+			var days_for_next = Math.floor((next_birsday.getTime() - date_now.getTime()) / (1000*60*60*24));
+
+			alert('До следующего дня рождения - ' + days_for_next + " дней!");
+
+		}
+
+		function func() {
+			
+		}
+		
+		
+	</script>
+
+	<style type="text/css">
+		button {
+			height: 40px;
+			padding: 10px;
+			margin: 5px auto;
+			display: block;
+			border-radius: 5px;
+		}
+
+		header {
+			width: 100%;
+		}
+
+		header h2{
+			width: 30%;
+			margin: 5px auto;
+		}
+	</style>
+</body>
+</html>
